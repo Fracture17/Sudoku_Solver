@@ -1,0 +1,8 @@
+#ifndef SODOKU_SOLVER_BRUTEFORCEBASICCHECKS_H
+#define SODOKU_SOLVER_BRUTEFORCEBASICCHECKS_H
+
+#include "Solver.h"
+
+Board solveBruteForceWithBasicChecks(Board& initialState);
+
+#endif //SODOKU_SOLVER_BRUTEFORCEBASICCHECKS_H
