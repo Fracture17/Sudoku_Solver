@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(Sodoku_Solver)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "-mpopcnt -O3")
+set(CMAKE_CXX_FLAGS "-mpopcnt -O3 -msse4.2")
 
 add_definitions(-fopenmp)
 
