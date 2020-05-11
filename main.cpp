@@ -25,6 +25,7 @@ void timeSolver(Board (*solver)(Board& initialState), fstream& stream) {
 int main() {
     fstream crooksResults("crooksResults.txt", fstream::out);
     fstream basicResults("basicResults.txt", fstream::out);
+    fstream bruteResults("bruteResults.txt", fstream::out);
     for(int threads = 1; threads <= 16; threads++) {
         omp_set_num_threads(threads);
 
@@ -34,9 +35,8 @@ int main() {
         basicResults << "Brute Force with basic checks, threads=" << threads << endl;
         timeSolver(solveBruteForceWithBasicChecks, basicResults);
 
-        //fstream bruteResults("bruteResults.txt", fstream::out);
-        //bruteResults << "Brute Force, threads=" << threads << endl;
-        //timeSolver(solveBruteForce, bruteResults);
+        bruteResults << "Brute Force, threads=" << threads << endl;
+        timeSolver(solveBruteForce, bruteResults);
     }
 
     return 0;
